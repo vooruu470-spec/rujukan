@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reevo Adnandivo Albar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7a9add71e4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <div class="pilihan">
+   <h1>Form Laporan Rujukan</h1>
+  </div>
+  
+  <form class="formulir" id="laporanForm">
+    
+    <div class="judul">
+      <h1>Pilih Waktu Laporan :</h1>
+      <select id="judul" required>
+        <option value="" disabled selected hidden>Pilih waktu...</option>
+        <option value="*SELAMAT PAGI IZIN MELAPORKAN PELAYANAN AMBULAN GAWAT DARURAT*">Pagi</option>
+        <option value="*SELAMAT SIANG IZIN MELAPORKAN PELAYANAN AMBULAN GAWAT DARURAT*">Siang</option>
+        <option value="*SELAMAT SORE IZIN MELAPORKAN PELAYANAN AMBULAN GAWAT DARURAT*">Sore</option>
+        <option value="*SELAMAT MALAM IZIN MELAPORKAN PELAYANAN AMBULAN GAWAT DARURAT*">Malam</option>
+      </select>
+    </div>
+    
+    <div class="date">
+      
+      <h1>Hari Dan Tanggal :</h1>
+      <input type="text" id="hariTanggal" placeholder="Rabu, 15 Oktober 2025" required>
+      
+      <h1>Pukul :</h1>
+      <input type="text" id="pukul" placeholder="00:00 Wib" required>
+      
+      <h1>Selesai :</h1>
+      <input type="text" id="selesai" placeholder="00:00 Wib" required>
+      
+      <h1>Tujuan :</h1>
+      <input type="text" id="tujuan" placeholder="Rumah ke RSUD Koja" required>
+      
+    </div>
+    <div class="data">
+      
+      <h1>Nama :</h1>
+      <input type="text" id="nama" placeholder="Albert" required>
+      
+      <h1>Umur :</h1>
+      <input type="text" id="umur" placeholder="32 Thn" required>
+      
+      <h1>Alamat :</h1>
+      <input type="text" id="alamat" placeholder="Jl. 
+      ..........." required>
+      
+      <h1>Jenis Kelamin :</h1>
+      <select id="jenisKelamin" required>
+         <option value="" disabled selected hidden>Pilih jenis kelamin...</option>
+         <option value="Laki-laki">Laki-laki</option>
+         <option value="Perempuan">Perempuan</option>
+      </select>
+      
+      <h1>Status :</h1>
+      <input type="text" id="status" placeholder="Rujukan" required>
+      
+      <h1>Kondisi Pasien :</h1>
+      <input type="text" id="kondisiPasien" placeholder="Sadar" required>
+      
+      <h1>Keluhan Pasien :</h1>
+      <input type="text" id="keluhanPasien" placeholder="-" required>
+      
+      <h1>Riwayat penyakit :</h1>
+      <input type="text" id="riwayatPenyakit" placeholder="HIV" required>
+      
+    </div>
+    
+    <div class="tindakan">
+      
+      <h1>Tindakan :</h1>
+      <textarea id="tindakan" placeholder="1. Membantu pasien ke brankar&#10;2. Memberikan O2..." rows="4" required></textarea>
+      
+    </div>
+    <div class="alat">
+      <h1>Alat Yang Digunakan :</h1>
+      <textarea id="alatDigunakan" placeholder="1. Pemakaian Handscoon...&#10;2. Masker..." rows="4" required></textarea>
+    </div>
+    
+    <div classs="petugas">
+      
+      <h1>Driver :</h1>
+      <input type="text" id="driver" placeholder="-" required>
+      
+      <h1>Crew :</h1>
+      <input type="text" id="crew" placeholder="-" required>
+      
+      <h1>Posko :</h1>
+      <input type="text" id="posko" placeholder="-" required>
+      
+    </div>
+    
+    <input type="submit" value="Kirim Laporan ke WA">
+    
+  </form>
+    
+    <script src="main.js"></script>
+</body>
+</html>

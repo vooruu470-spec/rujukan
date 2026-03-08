@@ -1,0 +1,205 @@
+/* === Global & Reset === */
+:root {
+  --bg-color: #f4f7f6;
+  --form-bg: #ffffff;
+  --text-color: #333;
+  --label-color: #444;
+  --border-color: #dcdcdc;
+  --primary-color: #007bff;
+  --primary-darker: #0056b3; /* Warna untuk hover */
+  --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* === Judul Utama Halaman === */
+.pilihan h1 {
+  text-align: center;
+  font-weight: 600;
+  color: var(--label-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* === Wrapper Formulir Utama === */
+.formulir {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--form-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* === Input Fields, Textarea, & Select === */
+input[type="text"],
+textarea,
+select { /* Menambahkan <select> */
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #fdfdfd;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.6;
+}
+
+/* Style khusus textarea */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* === Style khusus select (BARU) === */
+select {
+  /* Menghilangkan panah default */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Menambahkan panah kustom */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.8-9.3-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65em auto;
+  padding-right: 2.5rem; /* Memberi ruang untuk panah */
+}
+
+/* Mengatur warna placeholder untuk select */
+select:invalid {
+  color: #aaa;
+}
+select option {
+  color: var(--text-color);
+}
+/* ================================= */
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus { /* Menambahkan <select> */
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--form-bg);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* === Label (Semua H1 di dalam form) === */
+.formulir h1 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--label-color);
+}
+
+/* === Tata Letak Bagian Formulir === */
+
+/* Bagian 1 Kolom (Judul, Tindakan, Alat) */
+.judul,
+.tindakan,
+.alat {
+  margin-bottom: 2rem;
+}
+
+.judul h1,
+.tindakan h1,
+.alat h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Bagian 2 Kolom (Tanggal, Data, Petugas) - Desktop */
+.date,
+.data,
+.petugas {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.date h1,
+.data h1,
+.petugas h1 {
+  text-align: right;
+  margin: 0;
+}
+
+.petugas {
+  margin-bottom: 0;
+}
+
+/* === Tombol Submit === */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-darker);
+}
+
+input[type="submit"]:active {
+  transform: scale(0.99);
+}
+
+
+/* === Desain Responsif (Mobile) === */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .formulir {
+    padding: 1.5rem;
+  }
+
+  .date,
+  .data,
+  .petugas {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .date h1,
+  .data h1,
+  .petugas h1,
+  .alat h1,
+  .judul h1 { /* Menambahkan .judul h1 */
+    text-align: left;
+    margin-bottom: 0.25rem;
+  }
+
+  input[type="submit"] {
+    margin-top: 2rem;
+  }
+}
